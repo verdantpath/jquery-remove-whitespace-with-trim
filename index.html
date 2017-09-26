@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JQuery Remove Whitespace With Trim</title>
+
+</head>
+<body>
+<input type="text" name="first_name" class="cleanup" />
+<input type="text" name="last_name" class="cleanup" />
+
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script type="text/Javascript">
+(function($) {
+  $(document).ready(function() {
+    $('input.cleanup').on('blur', function() {
+      var value = $.trim( $(this).val() );
+      $(this).val( value );
+    });
+  });
+})(jQuery);
+</script>
+</body>
+</html>
